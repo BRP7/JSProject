@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="red">Red</button>
+    <button id="blue">Blue</button>
+    <button id="white">White</button>
+    <button id="black">black</button>
+</body>
+<script>
+    const btn=document.querySelectorAll("button");
+    const body=document.querySelector("body");
+    btn.forEach((btn)=>{
+        const btnId=btn.addEventListener("click",function(e){
+            if(e.target.id=="red"){
+                body.style.backgroundColor="red";
+            }
+            if(e.target.id=="blue"){
+                body.style.backgroundColor="blue";
+            }
+            if(e.target.id=="white"){
+                body.style.backgroundColor="white";
+            }
+            if(e.target.id=="black"){
+                body.style.backgroundColor="black";
+            }
+        })
+    })
+</script>
+</html>
