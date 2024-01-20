@@ -17,7 +17,6 @@
             border-radius: 10px;
             background-color: aquamarine;
             margin: auto;
-            
         }
     </style>
 </head>
@@ -25,12 +24,11 @@
     <div class="main">
         <h3>Your Local Time</h3>
         <div class="time" >
-
         </div>
     </div>
 </body>
 <script>
-    const time = document.querySelector(".time")
+    const time = document.querySelector(".time");
     setInterval(()=>{
         let date=new Date();
         time.innerHTML=date.toLocaleTimeString();
