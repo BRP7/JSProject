@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main{
+            text-align: center;
+            align-items: center;
+            margin-top:22%;
+            
+        }
+        .time{
+            width: 100px;
+            height: 40px;
+            border-radius: 10px;
+            background-color: aquamarine;
+            margin: auto;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <h3>Your Local Time</h3>
+        <div class="time" >
+
+        </div>
+    </div>
+</body>
+<script>
+    const time = document.querySelector(".time")
+    setInterval(()=>{
+        let date=new Date();
+        time.innerHTML=date.toLocaleTimeString();
+   },1000)
+   date.toLocaleTimeString();
+</script>
+</html>
