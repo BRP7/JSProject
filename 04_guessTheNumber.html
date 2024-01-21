@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main{
+            margin-left: 40%;
+            margin-top: 20%;
+        }
+    </style>
+</head>
+<body style="background-color: rgb(23, 22, 22); color: azure;">
+  <div class="main">
+    <h1>Guess a Number</h1>
+    <form>
+        <input type="text" name="" id="num">
+        <input type="button" value="Submit" id="sub">
+    </form>
+    <p>Previous Guesses : <span class="guesses"></span></p>
+    <p>Guesses Remaining : <span class="lastResult">10</span></p>
+    <p class="lowOrHigh"></p>
+  </div>
+</body>
+<script>
+     let num=document.getElementById("#num");
+     let sub=document.getElementById("#sub");
+     let pre=document.getElementsByClassName(".guesses");
+     let lastResult=document.getElementsByClassName(".lastResult");
+     let lowOrHigh=document.getElementsByClassName("lowOrHigh");
+
+     const p = document.createElement('p');
+     let prevGuess = [];
+     let numGuess = 1;
+     let playGame = true;
+
+    let randomNumberGen = Math.floor(Math.random()*100)+1;
+    sub.addEventListener("submit",function(e){
+        e.preventDefault();
+    })
+     
+</script>
+</html>
