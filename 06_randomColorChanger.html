@@ -21,11 +21,11 @@
     
     let intervalId;
     const startChangingColor = function (){
-        if(!intervalId){
-            intervalId = setInterval(changeBgColor,1000)
-        }
         const changeBgColor = function (){
             document.body.style.backgroundColor = randomColor();     
+        }
+        if(!intervalId){
+            intervalId = setInterval(changeBgColor,1000)
         }
     }
     
@@ -33,8 +33,11 @@
         clearInterval(intervalId);
         intervalId = null;
     }
-    document.getElementsByClassName("start").addEventListener("click",startChangingColor);
-    document.getElementsByClassName("stop").addEventListener('click',stopChangingColor);
+    // document.getElementsByClassName("start").addEventListener("click",startChangingColor);
+    // document.getElementsByClassName("stop").addEventListener('click',stopChangingColor);
+
+    document.querySelector(".start").addEventListener("click",startChangingColor);
+    document.querySelector(".stop").addEventListener("click",stopChangingColor);
      
     
     
